@@ -104,3 +104,20 @@ echo string | sed -n "s/[$targetstr].*//p" | wc -c
 
 # 两种方式均可
 # echo string | sed -n "s/[io].*//p" | wc -c
+
+name="jack"
+
+# 注意：判断字符串的时候最好使用双中括号，因为有时使用单中括号会产生错误，应该尽量避免该错误
+# z == zero
+if [[ -z $name ]] ;then
+    echo name is empty
+else 
+    echo name is not empty
+fi
+
+# 若字符串的长度不为0，则为真，即测试表达式成立。
+if [[ -n $name ]] ;then
+    echo name is empty
+else 
+    echo name is not empty
+fi
