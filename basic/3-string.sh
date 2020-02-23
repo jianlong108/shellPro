@@ -121,3 +121,11 @@ if [[ -n $name ]] ;then
 else 
     echo name is not empty
 fi
+
+# $ 检测字符串是否为空，不为空返回 true。
+if [ $name ]
+then
+   echo "$name : 字符串不为空"
+else
+   echo "$name : 字符串为空"
+fi
