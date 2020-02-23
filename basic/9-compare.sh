@@ -121,7 +121,19 @@ else
    echo "返回 false"
 fi
 
-s1="abc";
-s2="efg";
-strJack="hello"
-echo "s1 = $s1 s2 = $s2 s3 = $strJack"
+
+# 死循环
+# 1
+# while :
+# do
+#     command
+# done
+
+# 2
+# while true
+# do
+#     command
+# done
+
+# 3
+# for (( ; ; ))
