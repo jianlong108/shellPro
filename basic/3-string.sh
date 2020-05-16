@@ -129,3 +129,22 @@ then
 else
    echo "$name : 字符串为空"
 fi
+
+#! /bin/sh
+string="abcadefg"
+echo ${string:0:1} #a
+echo ${string:0} #abcadefg
+echo ${string:0-2:1} #f
+echo ${string:0-1} #g
+url='https://www.amap.com'
+echo ${url#*//} #www.amap.com
+echo ${url##*a} #p.com
+echo ${url%w*} #https://ww
+echo ${url%%.*} #https://www
+version='7.4.0.zip'
+echo ${version%.zip*} #7.4.0
+
+# 字符串是否包含另一个字符串
+str="this is a string"
+[[ $str =~ "this" ]] && echo "$str contains this"
+[[ $str =~ "that" ]] || echo "$str does NOT contain that"
